@@ -1220,7 +1220,7 @@ if ( ($button -ne "Cancel") -or ($Global:isSilent) ) {
                             $uninstallarguments = "-silent"+" "+$uninstallarguments
                         }
 
-                        if ( $prog.Name -match "Dell SupportAssist" ) {
+                        if ( $prog.Name -match "Dell SupportAssist|Dell Pair" ) {
                             $uninstallarguments = "/S"+" "+$uninstallarguments
                         }
 
@@ -2085,6 +2085,9 @@ BEGIN {
         "DVD\ Architect\ Studio.*",
         "Evernote.*",
         "Google\ Toolbar.*",
+        'HP\ Wolf\ Security$',
+        "HP\ Wolf\ Security \- Console",
+        "HP\ Security\ Update\ Service",
         "^HP\ Sure\ Run.*",
         "^HP\ .*",
         "HPInc.EnergyStar",
